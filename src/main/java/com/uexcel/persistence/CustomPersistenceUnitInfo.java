@@ -85,7 +85,7 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
     public Properties getProperties() {
         Properties p = new Properties();
         p.setProperty("hibernate.show_sql", "true");
-        p.setProperty("hibernate.hbm2ddl.auto", "update");
+        p.setProperty("hibernate.hbm2ddl.auto", "update"); // Just for learning purposes
         return p;
     }
 

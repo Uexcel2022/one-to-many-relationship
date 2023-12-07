@@ -26,11 +26,21 @@ public class App {
             // Department department2 = new Department();
             // department2.setDepartmentName("Marketing");
             // faculty.setDepartment(List.of(department, department2));
-            // entityManager.persist(faculty);
+            // department.setFaculty(faculty);
+            // department2.setFaculty(faculty);
+            // entityManager.persist(department);
+            // entityManager.persist(department2);
             // entityManager.getTransaction().commit();
 
             Faculty faculty = entityManager.find(Faculty.class, 1);
             System.out.println(faculty);
+            entityManager.remove(faculty);
+
+            // Department department = entityManager.find(Department.class, 1);
+            // System.out.println(department);
+            // entityManager.remove(department);
+
+            entityManager.getTransaction().commit();
 
         } catch (Exception e) {
             e.printStackTrace();
